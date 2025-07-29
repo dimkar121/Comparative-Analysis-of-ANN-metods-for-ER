@@ -45,37 +45,17 @@ The implementations rely on several key open-source libraries. You can install t
     pip install -r requirements.txt
  ```
 
-    **`requirements.txt`:**
-    ```
-    pandas
-    numpy
-    scikit-learn
-    faiss-gpu # or faiss-cpu if you don't have a GPU
-    annoy
-    scann
-    lshashpy3
-    sentence-transformers    
-    ```
-
+   
 ## ▶️ Running the Experiments
 
 The repository is structured to allow for easy replication of the results presented in the paper.
 
-1.  **Data Preparation:** Ensure the datasets are placed in the appropriate `/data` directory. Scripts for downloading and preprocessing the datasets are provided.
+1.  **Embedding Generation:** Use the provided scripts `embed_<DATASET>.py --model Mini` and `embed_<DATASET>.py --model E5` to generate the Mini and E5 embeddings (in terms of .pqt files) for each dataset. For ABT-BUY and ACM-DBLP, we provide the corresponding .pqt files.
 
-2.  **Embedding Generation:** Use the provided scripts to generate the Mini and E5 embeddings for each dataset.
-
-3.  **Running a Single Experiment:** You can run the evaluation for a specific ANN method on a given dataset using the main script. For example:
+3.  **Running a Single Experiment:** You can run the evaluation for a specific dataset using the main script. For example:
     ```bash
-    python run_experiment.py --method HNSW --dataset WDC --embedding_model E5
+    python experiments.py --model Mini --dataset ABT-BUY 
     ```
 
-4.  **Reproducing All Results:** A shell script is provided to run all experiments and generate the summary CSV files.
-    ```bash
-    bash run_all.sh
-    ```
 
-## 📈 Results
-
-The detailed results, including all performance metrics for each method on every dataset, are available in the `/results` directory. The paper provides a comprehensive analysis and discussion of these findings.
 
