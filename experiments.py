@@ -105,6 +105,15 @@ if __name__ == '__main__':
          df22["id"] = df22["id"].astype('int64')
          id2t = "id1"
          id1t = "id2"
+     elif dataset == "VOTERS":
+         truth_file="./data/truth_VOTERS.csv"
+         truth = pd.read_csv(truth_file, sep=",", encoding="utf-8", keep_default_na=False)
+         df22 = pd.read_parquet(f"./data/test_voters_A_{model}.pqt")
+         df11 = pd.read_parquet(f"./data/test_voters_B_{model}.pqt")
+         id2t = "id1"
+         id1t = "id2"
+
+
 
 
      methods = ['HNSW', 'HNSWPQ','HNSWSQ', 'IVF', 'IVFPQ', 'IVFSQ', 'ANNOY','LSH', 'SCANN']
