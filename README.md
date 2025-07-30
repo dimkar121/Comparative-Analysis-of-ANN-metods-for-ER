@@ -1,6 +1,6 @@
 # A Comparative Analysis of Approximate Nearest Neighbor Methods for Entity Resolution
 
-This repository contains the source code, datasets, and experimental results for the paper: "A Comparative Analysis of Approximate Nearest Neighbor Methods On Dense Embeddings for Entity Resolution" by D. Karapiperis (International Hellenic University), C. Tjortjis (International Hellenic University), and V.S. Verykios (Hellenic Open University).
+This repository contains the source code and datasets for the paper: "A Comparative Analysis of Approximate Nearest Neighbor Methods On Dense Embeddings for Entity Resolution" by D. Karapiperis (International Hellenic University), C. Tjortjis (International Hellenic University), and V.S. Verykios (Hellenic Open University).
 
 ## 📖 Abstract
 
