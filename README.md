@@ -53,7 +53,7 @@ If the library of FAISS that supports your CUDA requires an older version of Num
 
 The repository is structured to allow for easy replication of the results presented in the paper.
 
-1.  **Embedding Generation:** Use the provided scripts `embed_<DATASET>.py --model Mini` and `embed_<DATASET>.py --model E5` to generate the Mini and E5 embeddings (in terms of .pqt files) for each dataset, e.g., `embed_SCHOLAR-DBLP.py --model Mini`. For ABT-BUY and ACM-DBLP, we provide the corresponding .pqt files with the Mini embeddings.
+1.  **Embedding Generation:** Use the provided scripts `embed_<DATASET>.py --model Mini` and `embed_<DATASET>.py --model E5` to generate the Mini and E5 embeddings (in terms of .pqt files) for each dataset, e.g., `embed_SCHOLAR-DBLP.py --model Mini`. For ABT-BUY and ACM-DBLP, we provide the corresponding .pqt files with the Mini embeddings. The large scale datasets—WDC, DBLP, and VOTERS—can be found [here](https://drive.google.com/drive/folders/1IM9Ot8zpx11YcwXe_4ZTVeEx6wFaHiOo?usp=sharing).
 
 3.  **Running a Single Experiment:** You can run the evaluation for a specific dataset using the main script. For example:
     ```bash
