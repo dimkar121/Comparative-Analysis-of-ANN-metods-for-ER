@@ -45,12 +45,15 @@ The implementations rely on several key open-source libraries. You can install t
     pip install -r requirements.txt
  ```
 
+You can install a CUDA-enabled library for FAISS, be aware though of a potential incompatibility between `faiss-gpu` and `scann` concerning their required **NumPy** versions.
+If the library of FAISS that supports your CUDA requires an older version of NumPy (e.g., `<2.0`), then SCANN, which may require a newer version (e.g., `>=2.0`), should be installed and run in a separate virtual environment. This will prevent package version conflicts and ensure both libraries function correctly for the experiments.
+
    
 ## ▶️ Running the Experiments
 
 The repository is structured to allow for easy replication of the results presented in the paper.
 
-1.  **Embedding Generation:** Use the provided scripts `embed_<DATASET>.py --model Mini` and `embed_<DATASET>.py --model E5` to generate the Mini and E5 embeddings (in terms of .pqt files) for each dataset. For ABT-BUY and ACM-DBLP, we provide the corresponding .pqt files.
+1.  **Embedding Generation:** Use the provided scripts `embed_<DATASET>.py --model Mini` and `embed_<DATASET>.py --model E5` to generate the Mini and E5 embeddings (in terms of .pqt files) for each dataset, e.g., `embed_SCHOLAR-DBLP.py --model Mini`. For ABT-BUY and ACM-DBLP, we provide the corresponding .pqt files with the Mini embeddings.
 
 3.  **Running a Single Experiment:** You can run the evaluation for a specific dataset using the main script. For example:
     ```bash
